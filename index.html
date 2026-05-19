@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listas</title>
+    <title>Estructura Semántica HTML - Formulario de Contacto</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,9 +19,29 @@
 
     <!-- Main: Contenido principal de la página -->
     <main>
-        <!-- Section: Sección de contenido agrupado temáticamente -->
+        <!-- Section: Sección del formulario de contacto -->
         <section>
-            <!-- Espacio reservado para el contenido de la sección -->
+            <form
+                action="https://formspree.io/f/xlgvgboa"
+                method="POST"
+            >
+                <label>
+                    Nombre:
+                    <input type="text" name="name" required>
+                </label>
+                
+                <label>
+                    Correo electrónico:
+                    <input type="email" name="email" required>
+                </label>
+                
+                <label>
+                    Mensaje:
+                    <textarea name="message" rows="5" required></textarea>
+                </label>
+                
+                <button type="submit">Enviar</button>
+            </form>
         </section>
 
         <!-- Section: Otra sección de contenido -->
@@ -36,4 +56,3 @@
     </footer>
 </body>
 </html>
-
