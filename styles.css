@@ -1,0 +1,800 @@
+/* Importación de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base del cuerpo */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+}
+
+/* ========== HEADER CON IMAGEN DE FONDO ========== */
+header {
+    background-image: url('imagenes/tiendaHeader.webp');
+    background-size: cover;
+    background-position: center 82%;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* mejorar la legibilidad del texto sobre la imagen con gradiente oscuro*/
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.75) 0%, rgba(26, 26, 26, 0.85) 100%);
+    z-index: 1;
+}
+
+/* unas notitas musicales para decorar */
+header::after {
+    content: '♪♫♪';
+    position: absolute;
+    font-size: 120px;
+    opacity: 0.08;
+    bottom: -20px;
+    right: -20px;
+    font-family: monospace;
+    z-index: 1;
+}
+
+header h1,
+header p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Título sobre el banner */
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.8rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #ffffff;
+}
+/* slogan abajo del banner */
+header p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    opacity: 0.95;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ========== NAVEGACIÓN ========== */
+nav {
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #e63946;
+    border-top: 1px solid #e63946;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #f1faee;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    background: #ffffff;
+    color: #1a1a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+}
+
+/* ========== MAIN ========== */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ========== SECCIONES GENERALES ========== */
+section {
+    background: #1e1e1e;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(230, 57, 70, 0.2);
+}
+
+section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: #e63946;
+    margin-bottom: 30px;
+    border-left: 5px solid #e63946;
+    padding-left: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #f4a261;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* ========== Sección HERO (la que se ve arriba de todo al entrar) ========== */
+.hero-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.hero-img {
+    flex: 1;
+    min-width: 250px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid #e63946;
+    transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.02);
+}
+
+.hero-text {
+    flex: 1;
+    color: #f1faee;
+}
+
+.hero-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #e63946, #f4a261);
+    color: #1a1a1a;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+}
+
+/* ========== SECCIÓN PRODUCTOS - FLEXBOX ========== */
+.products-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
+}
+
+.products-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 25px;
+}
+
+.product-card {
+    background: #252525;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 280px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(230, 57, 70, 0.3);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: #e63946;
+    box-shadow: 0 15px 30px rgba(230, 57, 70, 0.2);
+}
+
+.product-img-real {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    color: #e63946;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #f4a261;
+    margin-bottom: 15px;
+}
+
+.buy-btn {
+    background: linear-gradient(135deg, #e63946, #f4a261);
+    color: #1a1a1a;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+}
+
+/* ========== SECCIÓN RESEÑAS - GRID ========== */
+.reviews-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.review-card {
+    background: #252525;
+    border-radius: 15px;
+    padding: 25px;
+    border-left: 4px solid #e63946;
+    transition: all 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateX(5px);
+    background: #2d2d2d;
+}
+
+.stars {
+    color: #e9c46a;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    color: #dddddd;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.reviewer {
+    color: #e63946;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* ========== SECCIÓN MULTIMEDIA ========== */
+.multimedia-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
+}
+
+.multimedia-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.video-wrapper, .map-wrapper {
+    flex: 1;
+    min-width: 280px;
+    background: #252525;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(230, 57, 70, 0.3);
+}
+
+.video-wrapper iframe, .map-wrapper iframe {
+    border-radius: 10px;
+}
+
+.video-caption, .map-caption {
+    color: #aaaaaa;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Galería de imágenes */
+.gallery {
+    margin-top: 30px;
+}
+
+.gallery h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery-flex img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #e63946;
+    transition: all 0.3s ease;
+}
+
+.gallery-flex img:hover {
+    transform: scale(1.05);
+    border-color: #f4a261;
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+/* ========== SECCIÓN CONTACTO - FORMULARIO (con formspree) ========== */
+.contact-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+    background: #252525;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(230, 57, 70, 0.3);
+}
+
+.contact-info h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #e63946;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.contact-info p {
+    color: #cccccc;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+}
+
+.social-icons a {
+    color: #e63946;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f4a261;
+    text-decoration: underline;
+}
+
+/* ===== FORMULARIO ===== */
+.contact-form-wrapper {
+    flex: 2;
+    min-width: 280px;
+}
+
+.contact-form-wrapper form {
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.contact-form-wrapper label {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #f1faee;
+    gap: 8px;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.contact-form-wrapper input,
+.contact-form-wrapper textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #333333;
+    border-radius: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #252525;
+    color: #f1faee;
+    box-sizing: border-box;
+}
+
+.contact-form-wrapper input:focus,
+.contact-form-wrapper textarea:focus {
+    outline: none;
+    border-color: #e63946;
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
+    background-color: #2d2d2d;
+}
+
+.contact-form-wrapper textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form-wrapper button {
+    background: linear-gradient(135deg, #e63946 0%, #f4a261 100%);
+    color: #1a1a1a;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.contact-form-wrapper button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(230, 57, 70, 0.4);
+    background: linear-gradient(135deg, #f04c5a, #f5b07c);
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #111111 100%);
+    color: #888888;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: auto;
+    border-top: 2px solid #e63946;
+}
+
+footer p {
+    margin: 8px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer p:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #e63946;
+    letter-spacing: 1px;
+}
+
+.footer-nav {
+    margin-top: 15px;
+}
+
+.footer-nav a {
+    color: #e63946;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 0.9rem;
+}
+
+.footer-nav a:hover {
+    color: #f4a261;
+    text-decoration: underline;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+@media (max-width: 1024px) {
+    main {
+        padding: 30px;
+        gap: 40px;
+    }
+    
+    section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .products-flex {
+        gap: 20px;
+    }
+    
+    .product-card {
+        width: 240px;
+        padding: 15px;
+    }
+    
+    .reviews-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    
+    header h1 {
+        font-size: 3rem;
+    }
+    
+    header p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 60px 20px;
+    }
+    
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 10px 20px;
+    }
+    
+    main {
+        padding: 20px;
+        gap: 30px;
+    }
+    
+    section {
+        padding: 25px;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text p {
+        text-align: center;
+    }
+    
+    .products-flex {
+        gap: 15px;
+    }
+    
+    .product-card {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .multimedia-container {
+        flex-direction: column;
+    }
+    
+    .video-wrapper, .map-wrapper {
+        min-width: 100%;
+    }
+    
+    .gallery-flex img {
+        width: 160px;
+        height: 120px;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .contact-info,
+    .contact-form-wrapper {
+        min-width: 100%;
+    }
+    
+    .contact-info {
+        text-align: center;
+    }
+    
+    .contact-info p {
+        justify-content: center;
+    }
+    
+    .price {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 50px 15px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    header p {
+        font-size: 0.9rem;
+    }
+    
+    main {
+        padding: 15px;
+        gap: 20px;
+    }
+    
+    section {
+        padding: 20px;
+    }
+    
+    section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    
+    .product-card {
+        padding: 15px;
+    }
+    
+    .product-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .review-card {
+        padding: 18px;
+    }
+    
+    .review-text {
+        font-size: 0.9rem;
+    }
+    
+    .stars {
+        font-size: 1rem;
+    }
+    
+    .gallery-flex img {
+        width: 140px;
+        height: 100px;
+    }
+    
+    .contact-info {
+        padding: 18px;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.85rem;
+    }
+    
+    .contact-form-wrapper input,
+    .contact-form-wrapper textarea {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+    
+    .contact-form-wrapper button {
+        font-size: 0.9rem;
+        padding: 12px 20px;
+    }
+    
+    footer p {
+        font-size: 0.8rem;
+    }
+    
+    .footer-nav a {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .products-flex {
+        justify-content: flex-start;
+    }
+    
+    .reviews-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
