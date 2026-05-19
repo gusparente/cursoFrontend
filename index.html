@@ -3,56 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estructura Semántica HTML - Formulario de Contacto</title>
+    <title>Ruido Maker - Instrumentos Musicales</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="imagenes/favicon.ico">
 </head>
 <body>
     <!-- Header: Encabezado principal de la página -->
     <header>
-        <!-- Espacio reservado para el encabezado (logo, título, etc.) -->
+        <h1>Ruido Maker</h1>
+        <p>Hacé el ruido que querés</p>
+        <p style="font-size:10px;display:block;background-color:black;width:max-content;margin:0 auto;padding:2px 10px;">Preentrega de Gustavo Parente para el curso de Frontend - Talento Tech</p>
     </header>
 
-    <!-- Nav: Barra de navegación principal -->
+    <!-- Nav: Barra de navegación principal con lista desordenada -->
     <nav>
-        <!-- Espacio reservado para enlaces de navegación -->
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#reseñas">Reseñas</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
     </nav>
 
     <!-- Main: Contenido principal de la página -->
     <main>
-        <!-- Section: Sección del formulario de contacto -->
-        <section>
-            <form
-                action="https://formspree.io/f/xlgvgboa"
-                method="POST"
-            >
-                <label>
-                    Nombre:
-                    <input type="text" name="name" required>
-                </label>
-                
-                <label>
-                    Correo electrónico:
-                    <input type="email" name="email" required>
-                </label>
-                
-                <label>
-                    Mensaje:
-                    <textarea name="message" rows="5" required></textarea>
-                </label>
-                
-                <button type="submit">Enviar</button>
-            </form>
+        <!-- Section: Inicio / Hero -->
+        <section id="inicio" class="hero-section">
+            <h2>Bienvenido a Ruido Maker</h2>
+            <div class="hero-content">
+                <img src="imagenes/tiendaInstrumentos.jpg" 
+                     alt="Instrumentos musicales" 
+                     class="hero-img">
+                <div class="hero-text">
+                    <p>Encontra los mejores instrumentos musicales al mejor precio.</p>
+                    <p>🎸 Guitarras | 🥁 Baterías | 🎹 Teclados | 🎺 Vientos | 🎻 Cuerdas</p>
+                    <a href="#productos" class="hero-btn">Ver productos →</a>
+                </div>
+            </div>
         </section>
 
-        <!-- Section: Otra sección de contenido -->
-        <section>
-            <!-- Espacio reservado para el contenido de la segunda sección -->
+        <!-- Section: Productos con Flexbox -->
+        <section id="productos" class="products-section">
+            <h2>🎸 Nuestros Productos</h2>
+            <div class="products-flex">
+                <div class="product-card">
+                    <img src="imagenes/fender-1965-stratocaster.webp" 
+                         alt="Guitarra Eléctrica" 
+                         class="product-img-real">
+                    <h3>Guitarra Eléctrica</h3>
+                    <p>Strato classic con pastillas de alta ganancia</p>
+                    <span class="price">$4.300.000</span>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <img src="imagenes/bata.jpg" 
+                         alt="Batería Acústica" 
+                         class="product-img-real">
+                    <h3>Batería Acústica</h3>
+                    <p>Set completo 5 piezas + platillos</p>
+                    <span class="price">$1.335.000</span>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <img src="imagenes/tecladoDigital.jpg" 
+                         alt="Teclado Digital" 
+                         class="product-img-real">
+                    <h3>Teclado Digital</h3>
+                    <p>88 teclas sensibles, 500+ sonidos</p>
+                    <span class="price">$840.000</span>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <img src="imagenes/TrompetaScoiposDorada.webp" 
+                         alt="Trompeta" 
+                         class="product-img-real">
+                    <h3>Trompeta Dorada</h3>
+                    <p>Latón lacado, sonido profesional</p>
+                    <span class="price">$290.000</span>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <img src="imagenes/electric-violins.webp" 
+                         alt="Violín" 
+                         class="product-img-real">
+                    <h3>Violín Eléctrico</h3>
+                    <p>Forma moderna, con amplificador</p>
+                    <span class="price">$248.000</span>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+                <div class="product-card">
+                    <img src="imagenes/01-Mackie-CR-Series-CR3.jpg" 
+                         alt="Audífonos Studio" 
+                         class="product-img-real">
+                    <h3>Monitores Studio</h3>
+                    <p>Audio profesional, respuesta plana</p>
+                    <span class="price">$376.000</span>
+                    <button class="buy-btn">Comprar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Reseñas con Grid -->
+        <section id="reseñas" class="reviews-section">
+            <h2>⭐ Reseñas de Clientes</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"La guitarra que compré en Ruido Maker tiene un sonido increíble. Llegó en perfectas condiciones y antes de lo esperado. ¡100% recomendados!"</p>
+                    <p class="reviewer">- Martina L.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Excelente atención y calidad. La batería suena espectacular y el precio fue el mejor del mercado. Volveré a comprar sin dudas."</p>
+                    <p class="reviewer">- Javier R.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★☆</div>
+                    <p class="review-text">"Muy buena relación precio-calidad. El teclado tiene funciones increíbles. Solo demoró un día más de lo previsto."</p>
+                    <p class="reviewer">- Camila F.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Atención al cliente impecable. Me asesoraron para elegir el violín perfecto para mi hija. Ella está feliz."</p>
+                    <p class="reviewer">- Roberto M.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Los monitores son profesionales. Ruido Maker tiene productos de primera calidad. Los recomiendo ampliamente."</p>
+                    <p class="reviewer">- Lucía G.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★☆</div>
+                    <p class="review-text">"Muy buena tienda, tienen variedad de instrumentos. La trompeta suena brillante. Envío rápido y seguro."</p>
+                    <p class="reviewer">- Federico P.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Multimedia (video e iframe) -->
+        <section id="multimedia" class="multimedia-section">
+            <h2>📹 Ruido Maker TV</h2>
+            <div class="multimedia-container">
+                <!-- Video embebido de YouTube -->
+                <div class="video-wrapper">
+                    <h3>🎬 Conocé nuestros instrumentos</h3>
+                    <iframe width="488" height="315" src="https://www.youtube.com/embed/ytarlN6OGgo?si=-9LmKSPXeUfLcBVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p class="video-caption">Descubrí la calidad de nuestros instrumentos</p>
+                </div>
+                
+                <!-- Mapa de ubicación (iframe) -->
+                <div class="map-wrapper">
+                    <h3>📍 Encontranos</h3>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.027976438472!2d-58.3837596842348!3d-34.60373446500972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacdc0c1e8a1%3A0x7d6e6b8f9e8c6a3b!2sTeatro%20Col%C3%B3n!5e0!3m2!1ses!2sar!4v1699999999999!5m2!1ses!2sar" 
+                        width="100%" 
+                        height="315" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <p class="map-caption">Av. Libertador 1234, CABA - Sucursal principal</p>
+                </div>
+            </div>
+            
+            <!-- Galería de imágenes -->
+            <div class="gallery">
+                <h3>🎨 Galería de imagenes</h3>
+                <div class="gallery-flex">
+                    <img src="imagenes/concierto.jpeg" alt="Concierto">
+                    <img src="imagenes/partituras.jpeg" alt="Partitura">
+                    <img src="imagenes/guitarrista.jpeg" alt="Guitarrista">
+                    <img src="imagenes/baterista.jpeg" alt="Baterista">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Contacto -->
+        <section id="contacto" class="contact-section">
+            <h2>📬 Contacto</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Información de contacto</h3>
+                    <p>📍 Av. Libertador 1234, CABA</p>
+                    <p>📞 +54 11 4567-8901</p>
+                    <p>✉️ hola@ruidomaker.com</p>
+                    <p>⏰ Lun a Vie: 10-20hs | Sáb: 10-15hs</p>
+                    <div class="social-links">
+                        <p>📱 Seguinos:</p>
+                        <div class="social-icons">
+                            <a href="#">Instagram</a> | 
+                            <a href="#">Facebook</a> | 
+                            <a href="#">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form
+                        action="https://formspree.io/f/xlgvgboa"
+                        method="POST"
+                    >
+                        <label>
+                            Nombre:
+                            <input type="text" name="name" required>
+                        </label>
+                        
+                        <label>
+                            Correo electrónico:
+                            <input type="email" name="email" required>
+                        </label>
+                        
+                        <label>
+                            Mensaje:
+                            <textarea name="message" rows="5" required></textarea>
+                        </label>
+                        
+                        <button type="submit">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
     <!-- Footer: Pie de página -->
     <footer>
-        <!-- Espacio reservado para el pie de página (copyright, enlaces secundarios, etc.) -->
+        <p>&copy; 2026 Ruido Maker - Todos los derechos reservados</p>
+        <p>🎸 Guitarra | 🥁 Batería | 🎹 Piano | 🎺 Trompeta | 🎻 Violín | 🎧 Audio</p>
+        <p class="footer-nav">
+            <a href="#inicio">Inicio</a> | 
+            <a href="#productos">Productos</a> | 
+            <a href="#reseñas">Reseñas</a> | 
+            <a href="#multimedia">Multimedia</a> | 
+            <a href="#contacto">Contacto</a>
+        </p>
     </footer>
 </body>
 </html>
