@@ -4,36 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruido Maker - Instrumentos Musicales</title>
+    <meta name="description" content="Ruido Maker - Tienda de instrumentos musicales. Encontrá guitarras, baterías, teclados, trompetas y más. Calidad y sonido profesional.">
+    <meta name="keywords" content="instrumentos musicales, guitarras, baterías, teclados, trompetas, tienda de música">
+    <meta name="author" content="Ruido Maker">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="imagenes/favicon.ico">
 </head>
 <body>
-    <!-- Header: Encabezado principal de la página -->
+    <a href="#inicio" class="skip-link">Saltar al contenido</a>
+
     <header>
         <h1>Ruido Maker</h1>
         <p>Hacé el ruido que querés</p>
-        <p style="font-size:10px;display:block;background-color:black;width:max-content;margin:0 auto;padding:2px 10px;">Preentrega de Gustavo Parente para el curso de Frontend - Talento Tech</p>
+        <p style="font-size:10px;display:block;background-color:black;width:max-content;margin:0 auto;padding:2px 10px;">Preentrega de Gustavo Parente - Talento Tech</p>
     </header>
 
-    <!-- Nav: Barra de navegación principal con lista desordenada -->
     <nav>
         <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#reseñas">Reseñas</a></li>
-            <li><a href="#multimedia">Multimedia</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#productos">Productos</a></li>
+            <li><a href="index.html#reseñas">Reseñas</a></li>
+            <li><a href="index.html#multimedia">Multimedia</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
         </ul>
     </nav>
 
-    <!-- Main: Contenido principal de la página -->
     <main>
-        <!-- Section: Inicio / Hero -->
         <section id="inicio" class="hero-section">
             <h2>Bienvenido a Ruido Maker</h2>
             <div class="hero-content">
                 <img src="imagenes/tiendaInstrumentos.jpg" 
-                     alt="Instrumentos musicales" 
+                     alt="Tienda de instrumentos musicales en exhibición" 
                      class="hero-img">
                 <div class="hero-text">
                     <p>Encontra los mejores instrumentos musicales al mejor precio.</p>
@@ -43,68 +44,83 @@
             </div>
         </section>
 
-        <!-- Section: Productos con Flexbox -->
         <section id="productos" class="products-section">
             <h2>🎸 Nuestros Productos</h2>
             <div class="products-flex">
                 <div class="product-card">
-                    <img src="imagenes/fender-1965-stratocaster.webp" 
-                         alt="Guitarra Eléctrica" 
-                         class="product-img-real">
-                    <h3>Guitarra Eléctrica</h3>
-                    <p>Strato classic con pastillas de alta ganancia</p>
-                    <span class="price">$4.300.000</span>
-                    <button class="buy-btn">Comprar</button>
+                    <a href="producto.html?id=guitarra" class="product-link">
+                        <img src="imagenes/fender-1965-stratocaster.webp" 
+                             alt="Guitarra eléctrica Fender Stratocaster" 
+                             class="product-img-real">
+                        <h3>Guitarra Eléctrica</h3>
+                        <p class="product-short-desc">Strato classic con pastillas de alta ganancia</p>
+                        <span class="price">$4.300.000</span>
+                    </a>
+                    <button class="buy-btn" data-product="guitarra">Comprar</button>
                 </div>
+
                 <div class="product-card">
-                    <img src="imagenes/bata.jpg" 
-                         alt="Batería Acústica" 
-                         class="product-img-real">
-                    <h3>Batería Acústica</h3>
-                    <p>Set completo 5 piezas + platillos</p>
-                    <span class="price">$1.335.000</span>
-                    <button class="buy-btn">Comprar</button>
+                    <a href="producto.html?id=bateria" class="product-link">
+                        <img src="imagenes/bata.jpg" 
+                             alt="Batería acústica profesional" 
+                             class="product-img-real">
+                        <h3>Batería Acústica</h3>
+                        <p class="product-short-desc">Set completo 5 piezas + platillos</p>
+                        <span class="price">$1.335.000</span>
+                    </a>
+                    <button class="buy-btn" data-product="bateria">Comprar</button>
                 </div>
+
                 <div class="product-card">
-                    <img src="imagenes/tecladoDigital.jpg" 
-                         alt="Teclado Digital" 
-                         class="product-img-real">
-                    <h3>Teclado Digital</h3>
-                    <p>88 teclas sensibles, 500+ sonidos</p>
-                    <span class="price">$840.000</span>
-                    <button class="buy-btn">Comprar</button>
+                    <a href="producto.html?id=teclado" class="product-link">
+                        <img src="imagenes/tecladoDigital.jpg" 
+                             alt="Teclado digital profesional" 
+                             class="product-img-real">
+                        <h3>Teclado Digital</h3>
+                        <p class="product-short-desc">88 teclas sensibles, 500+ sonidos</p>
+                        <span class="price">$840.000</span>
+                    </a>
+                    <button class="buy-btn" data-product="teclado">Comprar</button>
                 </div>
+
                 <div class="product-card">
-                    <img src="imagenes/TrompetaScoiposDorada.webp" 
-                         alt="Trompeta" 
-                         class="product-img-real">
-                    <h3>Trompeta Dorada</h3>
-                    <p>Latón lacado, sonido profesional</p>
-                    <span class="price">$290.000</span>
-                    <button class="buy-btn">Comprar</button>
+                    <a href="producto.html?id=trompeta" class="product-link">
+                        <img src="imagenes/TrompetaScoiposDorada.webp" 
+                             alt="Trompeta dorada de latón lacado" 
+                             class="product-img-real">
+                        <h3>Trompeta Dorada</h3>
+                        <p class="product-short-desc">Latón lacado, sonido profesional</p>
+                        <span class="price">$290.000</span>
+                    </a>
+                    <button class="buy-btn" data-product="trompeta">Comprar</button>
                 </div>
+
                 <div class="product-card">
-                    <img src="imagenes/electric-violins.webp" 
-                         alt="Violín" 
-                         class="product-img-real">
-                    <h3>Violín Eléctrico</h3>
-                    <p>Forma moderna, con amplificador</p>
-                    <span class="price">$248.000</span>
-                    <button class="buy-btn">Comprar</button>
+                    <a href="producto.html?id=violin" class="product-link">
+                        <img src="imagenes/electric-violins.webp" 
+                             alt="Violín eléctrico moderno" 
+                             class="product-img-real">
+                        <h3>Violín Eléctrico</h3>
+                        <p class="product-short-desc">Forma moderna, con amplificador</p>
+                        <span class="price">$248.000</span>
+                    </a>
+                    <button class="buy-btn" data-product="violin">Comprar</button>
                 </div>
+
                 <div class="product-card">
-                    <img src="imagenes/01-Mackie-CR-Series-CR3.jpg" 
-                         alt="Audífonos Studio" 
-                         class="product-img-real">
-                    <h3>Monitores Studio</h3>
-                    <p>Audio profesional, respuesta plana</p>
-                    <span class="price">$376.000</span>
-                    <button class="buy-btn">Comprar</button>
+                    <a href="producto.html?id=monitores" class="product-link">
+                        <img src="imagenes/01-Mackie-CR-Series-CR3.jpg" 
+                             alt="Monitores de estudio Mackie" 
+                             class="product-img-real">
+                        <h3>Monitores Studio</h3>
+                        <p class="product-short-desc">Audio profesional, respuesta plana</p>
+                        <span class="price">$376.000</span>
+                    </a>
+                    <button class="buy-btn" data-product="monitores">Comprar</button>
                 </div>
             </div>
         </section>
 
-        <!-- Section: Reseñas con Grid -->
         <section id="reseñas" class="reviews-section">
             <h2>⭐ Reseñas de Clientes</h2>
             <div class="reviews-grid">
@@ -141,18 +157,15 @@
             </div>
         </section>
 
-        <!-- Section: Multimedia (video e iframe) -->
         <section id="multimedia" class="multimedia-section">
             <h2>📹 Ruido Maker TV</h2>
             <div class="multimedia-container">
-                <!-- Video embebido de YouTube -->
                 <div class="video-wrapper">
                     <h3>🎬 Conocé nuestros instrumentos</h3>
                     <iframe width="488" height="315" src="https://www.youtube.com/embed/ytarlN6OGgo?si=-9LmKSPXeUfLcBVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <p class="video-caption">Descubrí la calidad de nuestros instrumentos</p>
                 </div>
                 
-                <!-- Mapa de ubicación (iframe) -->
                 <div class="map-wrapper">
                     <h3>📍 Encontranos</h3>
                     <iframe 
@@ -168,19 +181,17 @@
                 </div>
             </div>
             
-            <!-- Galería de imágenes -->
             <div class="gallery">
                 <h3>🎨 Galería de imagenes</h3>
                 <div class="gallery-flex">
-                    <img src="imagenes/concierto.jpeg" alt="Concierto">
-                    <img src="imagenes/partituras.jpeg" alt="Partitura">
-                    <img src="imagenes/guitarrista.jpeg" alt="Guitarrista">
-                    <img src="imagenes/baterista.jpeg" alt="Baterista">
+                    <img src="imagenes/concierto.jpeg" alt="Concierto en vivo">
+                    <img src="imagenes/partituras.jpeg" alt="Partituras musicales">
+                    <img src="imagenes/guitarrista.jpeg" alt="Guitarrista tocando">
+                    <img src="imagenes/baterista.jpeg" alt="Baterista en vivo">
                 </div>
             </div>
         </section>
 
-        <!-- Section: Contacto -->
         <section id="contacto" class="contact-section">
             <h2>📬 Contacto</h2>
             <div class="contact-container">
@@ -200,10 +211,7 @@
                     </div>
                 </div>
                 <div class="contact-form-wrapper">
-                    <form
-                        action="https://formspree.io/f/xlgvgboa"
-                        method="POST"
-                    >
+                    <form action="https://formspree.io/f/xlgvgboa" method="POST">
                         <label>
                             Nombre:
                             <input type="text" name="name" required>
@@ -226,17 +234,18 @@
         </section>
     </main>
 
-    <!-- Footer: Pie de página -->
     <footer>
         <p>&copy; 2026 Ruido Maker - Todos los derechos reservados</p>
         <p>🎸 Guitarra | 🥁 Batería | 🎹 Piano | 🎺 Trompeta | 🎻 Violín | 🎧 Audio</p>
         <p class="footer-nav">
-            <a href="#inicio">Inicio</a> | 
-            <a href="#productos">Productos</a> | 
-            <a href="#reseñas">Reseñas</a> | 
-            <a href="#multimedia">Multimedia</a> | 
-            <a href="#contacto">Contacto</a>
+            <a href="index.html">Inicio</a> | 
+            <a href="index.html#productos">Productos</a> | 
+            <a href="index.html#reseñas">Reseñas</a> | 
+            <a href="index.html#multimedia">Multimedia</a> | 
+            <a href="index.html#contacto">Contacto</a>
         </p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
